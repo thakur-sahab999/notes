@@ -22,9 +22,13 @@ export const NoteCard = ({
           className={`collapse-arrow ${
             isExpanded ? "collapse-open" : ""
           } collapse`}
-          onClick={() => setIsExpanded(!isExpanded)}
         >
-          <div className="collapse-title text-xl font-bold">{note.title}</div>
+          <div
+            className="collapse-title text-xl font-bold"
+            onClick={() => setIsExpanded(!isExpanded)}
+          >
+            {note.title}
+          </div>
           <div className="collapse-content">
             <article className="prose lg:prose-xl">
               <ReactMarkdown>{note.content}</ReactMarkdown>
